@@ -1,465 +1,841 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            primary: {
-                                50:  '#fffbeb',
-                                100: '#fef3c7',
-                                200: '#fde68a',
-                                300: '#fcd34d',
-                                400: '#fbbf24',
-                                500: '#f59e0b',
-                                600: '#d97706',
-                                700: '#b45309',
-                                800: '#92400e',
-                                900: '#78350f',
-                            }
-                        },
-                        fontFamily: {
-                            sans: ['Inter', 'sans-serif'],
-                        },
-                    }
-                }
-            }
-        </script>
-        <title>Portfolio - Dung Phan</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-            html {
-                scroll-behavior: smooth;
-            }
-            /* Custom scrollbar for a modern look */
-            ::-webkit-scrollbar {
-                width: 8px;
-                background: #f7f7f7;
-            }
-            ::-webkit-scrollbar-thumb {
-                background: #cccccc;
-                border-radius: 4px;
-            }
-        </style>
-    </head>
-    <body class="bg-gradient-to-br from-primary-50 via-white to-primary-100 text-gray-900 font-sans min-h-screen">
-        <!-- Navbar with sticky functionality -->
-        <header class="bg-white/80 backdrop-blur shadow-md sticky top-0 z-50 transition-all duration-300">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center py-4">
-                    <div class="flex items-center space-x-2">
-                        <span class="text-3xl font-extrabold bg-gradient-to-r from-primary-700 via-primary-500 to-primary-400 bg-clip-text text-transparent tracking-tight drop-shadow">Dung Phan</span>
-                    </div>
-                    <nav class="hidden md:flex space-x-8">
-                        <a href="#about" class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">About</a>
-                        <a href="#honour" class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">Honour Portfolio</a>
-                        <a href="#projects" class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">Projects</a>
-                        <a href="#contact" class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">Contact</a>
-                    </nav>
-                    <div class="md:hidden">
-                        <button id="menuButton" class="text-gray-700 hover:text-primary-700 focus:outline-none">
-                            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <!-- Mobile menu -->
-                <div id="mobileMenu" class="md:hidden hidden">
-                    <div class="px-2 pt-2 pb-4 space-y-1">
-                        <a href="#about" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors">About</a>
-                        <a href="#honour" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors">Honour Portfolio</a>
-                        <a href="#projects" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors">Projects</a>
-                        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors">Contact</a>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#ecfdf5",
+                100: "#d1fae5",
+                200: "#a7f3d0",
+                300: "#6ee7b7",
+                400: "#34d399",
+                500: "#10b981",
+                600: "#059669",
+                700: "#047857",
+                800: "#065f46",
+                900: "#064e3b",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Portfolio - Dung Phan</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Custom scrollbar for a modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #f7f7f7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cccccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-primary-50 via-white to-primary-100 text-gray-900 font-sans min-h-screen"
+  >
+    <!-- Navbar with sticky functionality -->
+    <header
+      class="bg-white/80 backdrop-blur shadow-md sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-2">
+            <span
+              class="text-3xl font-extrabold bg-gradient-to-r from-primary-700 via-primary-500 to-primary-400 bg-clip-text text-transparent tracking-tight drop-shadow"
+              >Dung Phan</span
+            >
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+              >About</a
+            >
+            <a
+              href="#infographic"
+              class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+              >Infographic</a
+            >
+            <a
+              href="#honour"
+              class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+              >Saxion Honour Program</a
+            >
+            <a
+              href="#projects"
+              class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="relative text-gray-700 hover:text-primary-700 font-semibold transition-colors after:block after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+              >Contact</a
+            >
+          </nav>
+          <div class="md:hidden">
+            <button
+              id="menuButton"
+              class="text-gray-700 hover:text-primary-700 focus:outline-none"
+            >
+              <svg
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden">
+          <div class="px-2 pt-2 pb-4 space-y-1">
+            <a
+              href="#about"
+              class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors"
+              >About</a
+            >
+            <a
+              href="#infographic"
+              class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors"
+              >Infographic</a
+            >
+            <a
+              href="#honour"
+              class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors"
+              >Saxion Honour Program</a
+            >
+            <a
+              href="#projects"
+              class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="block px-3 py-2 rounded-md text-base font-semibold text-gray-700 hover:text-white hover:bg-primary-600 transition-colors"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Hero Section -->
+      <section id="about" class="mb-24">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-10"
+        >
+          <!-- Text Content -->
+          <div
+            class="md:w-1/2 text-center md:text-left mb-8 md:mb-0 flex flex-col justify-center"
+          >
+            <h1
+              class="text-5xl md:text-6xl font-extrabold mb-4 text-gray-800 leading-tight drop-shadow"
+            >
+              Hi, I'm
+              <span
+                class="bg-gradient-to-r from-primary-700 via-primary-500 to-primary-400 bg-clip-text text-transparent"
+              >
+                Dung Phan
+              </span>
+            </h1>
+            <p class="text-2xl text-gray-600 mb-8 font-light">
+              Computer Science student passionate about software development,
+              embedded systems, and hardware integration. Experienced Data
+              Analyst, eager to leverage programming, data processing, and cloud
+              technologies in a Data Engineering role to drive innovation and
+              impact.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+              <a
+                href="#contact"
+                class="px-7 py-3 bg-gradient-to-r from-primary-700 to-primary-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-primary-700 transition-all duration-200"
+                >Contact Me</a
+              >
+              <a
+                href="#projects"
+                class="px-7 py-3 bg-white border border-primary-500 text-primary-700 font-semibold rounded-lg shadow-lg hover:bg-primary-50 hover:scale-105 transition-all duration-200"
+                >View Projects</a
+              >
             </div>
-        </header>
+            <!-- Skills Badges -->
+            <div
+              class="mt-8 flex flex-wrap gap-3 justify-center md:justify-start"
+            >
+              <span
+                class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium"
+                >Python</span
+              >
+              <span
+                class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium"
+                >C/C++</span
+              >
+              <span
+                class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium"
+                >SQL</span
+              >
+              <span
+                class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium"
+                >Embedded Systems</span
+              >
+              <span
+                class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium"
+                >Cloud</span
+              >
+              <span
+                class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium"
+                >Data Analysis</span
+              >
+            </div>
+          </div>
+          <!-- Profile-->
+          <div class="md:w-2/5 flex flex-col items-center gap-8">
+            <div class="relative group">
+              <div
+                class="absolute inset-0 bg-gradient-to-tr from-primary-400 via-primary-200 to-primary-100 rounded-full blur-2xl opacity-40 scale-110"
+              ></div>
+              <img
+                src="img/profile_pic.jpg"
+                alt="Profile"
+                class="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-300 mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Video Infographic, optimized for 400x1000px, centered and aligned with header -->
+    <section id="infographic" class="mb-24">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-extrabold text-gray-800 mb-2 tracking-tight">
+        Honour Portfolio
+        </h2>
+        <div
+        class="h-1 w-24 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded"
+        ></div>
+      </div>
+      <div class="flex justify-center">
+        <div
+        class="w-full max-w-[400px] rounded-xl overflow-hidden shadow-lg border border-primary-100 bg-white"
+        >
+        <video
+          controls
+          poster="img/infographic.png"
+          class="w-full"
+          style="aspect-ratio: 2/5; max-height: 1000px"
+        >
+          <source src="video/infographic.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="p-3 text-center text-gray-700 text-sm">
+          <span class="font-semibold">Infographic Video:</span> My journey
+          and achievements at a glance.
+        </div>
+        </div>
+      </div>
+    </section>
+      <!-- Honour Portfolio Timeline Section -->
+      <section id="honour" class="mb-24">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-2 tracking-tight">
+            Honour Portfolio
+          </h2>
+          <div
+            class="h-1 w-24 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded"
+          ></div>
+          <p class="text-xl text-gray-600 mt-4 font-light">
+            First-Year Honours Student Journey (2024–2025)
+          </p>
+        </div>
 
-        <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <!-- Hero Section -->
-            <section id="about" class="mb-24">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-10">
-                    <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-                        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-gray-800 leading-tight drop-shadow">
-                            Hi, I'm <span class="bg-gradient-to-r from-primary-700 via-primary-500 to-primary-400 bg-clip-text text-transparent">Dung Phan</span>
-                        </h1>
-                        <p class="text-2xl text-gray-600 mb-8 font-light">A passionate web developer specializing in modern JavaScript and Tailwind CSS.</p>
-                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                            <a href="#contact" class="px-7 py-3 bg-gradient-to-r from-primary-700 to-primary-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-primary-700 transition-all duration-200">Contact Me</a>
-                            <a href="#projects" class="px-7 py-3 bg-white border border-primary-500 text-primary-700 font-semibold rounded-lg shadow-lg hover:bg-primary-50 hover:scale-105 transition-all duration-200">View Projects</a>
-                        </div>
-                    </div>
-                    <div class="md:w-2/5 flex flex-col items-center gap-8">
-                        <div class="relative group">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-primary-400 via-primary-200 to-primary-100 rounded-full blur-2xl opacity-40 scale-110"></div>
-                            <img src="img/profile_pic.jpg" alt="Profile" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-300 mx-auto">
-                        </div>
-                        <!-- Video Infographic -->
-                        <div class="w-full max-w-xs md:max-w-sm rounded-xl overflow-hidden shadow-lg border border-primary-100 bg-white">
-                            <video controls poster="img/video_poster.jpg" class="w-full h-48 object-cover">
-                                <source src="video/infographic.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="p-3 text-center text-gray-700 text-sm">
-                                <span class="font-semibold">Infographic Video:</span> My journey and achievements at a glance.
-                            </div>
-                        </div>
-                    </div>
+        <div class="space-y-14">
+          <!-- September 2024 -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div
+                class="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-500 text-white p-8 flex flex-col justify-center"
+              >
+                <h3 class="text-3xl font-bold mb-2">September 2024</h3>
+                <p class="text-primary-100 text-lg">Classes Begin</p>
+                <div class="mt-6 flex space-x-4">
+                  <a href="#" class="hover:text-primary-200 transition-colors"
+                    ><i class="fab fa-instagram text-2xl"></i
+                  ></a>
+                  <a href="#" class="hover:text-primary-200 transition-colors"
+                    ><i class="fab fa-twitter text-2xl"></i
+                  ></a>
+                  <a href="#" class="hover:text-primary-200 transition-colors"
+                    ><i class="fab fa-linkedin text-2xl"></i
+                  ></a>
                 </div>
-            </section>
-
-            <!-- Honour Portfolio Timeline Section -->
-            <section id="honour" class="mb-24">
-                <div class="text-center mb-14">
-                    <h2 class="text-4xl font-extrabold text-gray-800 mb-2 tracking-tight">Honour Portfolio</h2>
-                    <div class="h-1 w-24 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded"></div>
-                    <p class="text-xl text-gray-600 mt-4 font-light">First-Year Honours Student Journey (2024–2025)</p>
+              </div>
+              <div class="md:w-2/3 p-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                  <div class="md:w-1/2">
+                    <ul class="space-y-3 text-gray-700 text-lg">
+                      <li class="flex items-start">
+                        <svg
+                          class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                        First semester classes officially start
+                      </li>
+                      <li class="flex items-start">
+                        <svg
+                          class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                        Meeting professors and classmates
+                      </li>
+                      <li class="flex items-start">
+                        <svg
+                          class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                        Joining clubs, societies, and campus activities
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 mt-4 md:mt-0 flex items-center">
+                    <div
+                      class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border border-primary-100"
+                    >
+                      <img
+                        src="/api/placeholder/500/300"
+                        alt="September 2024 activities"
+                        class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="space-y-14">
-                    <!-- August 2024 -->
-                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-500 text-white p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold mb-2">August 2024</h3>
-                                <p class="text-primary-100 text-lg">Orientation & Registration</p>
-                                <div class="mt-6 flex space-x-4">
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 p-8">
-                                <div class="flex flex-col md:flex-row gap-8">
-                                    <div class="md:w-1/2">
-                                        <ul class="space-y-3 text-gray-700 text-lg">
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                University welcome events & student orientation
-                                            </li>
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                Registration for classes and student ID issued
-                                            </li>
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                Campus tour, academic advising
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="md:w-1/2 mt-4 md:mt-0 flex items-center">
-                                        <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border border-primary-100">
-                                            <img src="/api/placeholder/500/300" alt="August 2024 activities" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- September 2024 -->
-                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-500 text-white p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold mb-2">September 2024</h3>
-                                <p class="text-primary-100 text-lg">Classes Begin</p>
-                                <div class="mt-6 flex space-x-4">
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 p-8">
-                                <div class="flex flex-col md:flex-row gap-8">
-                                    <div class="md:w-1/2">
-                                        <ul class="space-y-3 text-gray-700 text-lg">
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                First semester classes officially start
-                                            </li>
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                Meeting professors and classmates
-                                            </li>
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                Joining clubs, societies, and campus activities
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="md:w-1/2 mt-4 md:mt-0 flex items-center">
-                                        <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border border-primary-100">
-                                            <img src="/api/placeholder/500/300" alt="September 2024 activities" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- October 2024 -->
-                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-500 text-white p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold mb-2">October 2024</h3>
-                                <p class="text-primary-100 text-lg">Settling In</p>
-                                <div class="mt-6 flex space-x-4">
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-youtube text-2xl"></i></a>
-                                    <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 p-8">
-                                <div class="flex flex-col md:flex-row gap-8">
-                                    <div class="md:w-1/2">
-                                        <ul class="space-y-3 text-gray-700 text-lg">
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                Assignments and quizzes begin
-                                            </li>
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                Library and online resources explored
-                                            </li>
-                                            <li class="flex items-start">
-                                                <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                                Mid-semester progress check
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="md:w-1/2 mt-4 md:mt-0 flex items-center">
-                                        <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border border-primary-100">
-                                            <img src="/api/placeholder/500/300" alt="October 2024 activities" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Quick Preview for Next Months -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- November 2024 -->
-                        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                            <div class="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-5">
-                                <h3 class="text-2xl font-bold">November 2024</h3>
-                                <p class="text-primary-100 text-base">Midterms</p>
-                            </div>
-                            <div class="p-5">
-                                <div class="mb-4">
-                                    <img src="/api/placeholder/400/200" alt="November 2024" class="rounded-lg w-full h-32 object-cover">
-                                </div>
-                                <div class="text-base text-gray-700 space-y-1">
-                                    <p>Midterm exams</p>
-                                    <p>Academic support workshops</p>
-                                    <p>Stress management & self-care</p>
-                                </div>
-                                <div class="mt-4 flex space-x-3">
-                                    <a href="#" class="text-primary-600 hover:text-primary-800 transition-colors"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" class="text-primary-600 hover:text-primary-800 transition-colors"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- December 2024 -->
-                        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                            <div class="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-5">
-                                <h3 class="text-2xl font-bold">December 2024</h3>
-                                <p class="text-primary-100 text-base">Finals & Winter Break</p>
-                            </div>
-                            <div class="p-5">
-                                <div class="mb-4">
-                                    <img src="/api/placeholder/400/200" alt="December 2024" class="rounded-lg w-full h-32 object-cover">
-                                </div>
-                                <div class="text-base text-gray-700 space-y-1">
-                                    <p>Final exams</p>
-                                    <p>Submission of major assignments</p>
-                                    <p>Winter holidays and travel</p>
-                                </div>
-                                <div class="mt-4 flex space-x-3">
-                                    <a href="#" class="text-primary-600 hover:text-primary-800 transition-colors"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" class="text-primary-600 hover:text-primary-800 transition-colors"><i class="fab fa-youtube"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- January 2025 -->
-                        <div class="bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                            <div class="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-5">
-                                <h3 class="text-2xl font-bold">January 2025</h3>
-                                <p class="text-primary-100 text-base">Semester 2 Starts</p>
-                            </div>
-                            <div class="p-5">
-                                <div class="mb-4">
-                                    <img src="/api/placeholder/400/200" alt="January 2025" class="rounded-lg w-full h-32 object-cover">
-                                </div>
-                                <div class="text-base text-gray-700 space-y-1">
-                                    <p>New classes, new professors</p>
-                                    <p>Focus on improving study habits</p>
-                                    <p>Start of student projects</p>
-                                </div>
-                                <div class="mt-4 flex space-x-3">
-                                    <a href="#" class="text-primary-600 hover:text-primary-800 transition-colors"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" class="text-primary-600 hover:text-primary-800 transition-colors"><i class="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center mt-10">
-                        <button id="showMoreMonths" class="px-8 py-3 bg-gradient-to-r from-primary-700 to-primary-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-primary-700 transition-all duration-200">
-                            Show More Months
-                        </button>
-                    </div>
-
-                    <div id="additionalMonths" class="hidden space-y-14">
-                        <!-- February 2025 -->
-                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                            <div class="flex flex-col md:flex-row">
-                                <div class="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-500 text-white p-8 flex flex-col justify-center">
-                                    <h3 class="text-3xl font-bold mb-2">February 2025</h3>
-                                    <p class="text-primary-100 text-lg">Deep Learning Phase</p>
-                                    <div class="mt-6 flex space-x-4">
-                                        <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
-                                        <a href="#" class="hover:text-primary-200 transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
-                                    </div>
-                                </div>
-                                <div class="md:w-2/3 p-8">
-                                    <div class="flex flex-col md:flex-row gap-8">
-                                        <div class="md:w-1/2">
-                                            <ul class="space-y-3 text-gray-700 text-lg">
-                                                <li class="flex items-start">
-                                                    <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                    </svg>
-                                                    Workshops, presentations, and seminars
-                                                </li>
-                                                <li class="flex items-start">
-                                                    <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                    </svg>
-                                                    Clubs and academic competitions
-                                                </li>
-                                                <li class="flex items-start">
-                                                    <svg class="h-6 w-6 text-primary-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                    </svg>
-                                                    Continuous assessments
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="md:w-1/2 mt-4 md:mt-0 flex items-center">
-                                            <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border border-primary-100">
-                                                <img src="/api/placeholder/500/300" alt="February 2025 activities" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
+          <!-- October 2024 -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div
+                class="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-500 text-white p-8 flex flex-col justify-center"
+              >
+                <h3 class="text-3xl font-bold mb-2">October 2024</h3>
+                <p class="text-primary-100 text-lg">Settling In</p>
+                <div class="mt-6 flex space-x-4">
+                  <a href="#" class="hover:text-primary-200 transition-colors"
+                    ><i class="fab fa-instagram text-2xl"></i
+                  ></a>
+                  <a href="#" class="hover:text-primary-200 transition-colors"
+                    ><i class="fab fa-youtube text-2xl"></i
+                  ></a>
+                  <a href="#" class="hover:text-primary-200 transition-colors"
+                    ><i class="fab fa-facebook text-2xl"></i
+                  ></a>
                 </div>
-            </section>
-            <!-- Projects Section -->
-            <section id="projects" class="mb-24">
-                <div class="text-center mb-14">
-                    <h2 class="text-4xl font-extrabold text-gray-800 mb-2 tracking-tight">Projects</h2>
-                    <div class="h-1 w-24 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded"></div>
-                    <p class="text-xl text-gray-600 mt-4 font-light">A showcase of my work</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                        <img src="/api/placeholder/400/200" alt="Project 1" class="w-full h-40 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold">Project Title 1</h3>
-                            <p class="text-gray-700 mt-3 text-base">Brief description of the project.</p>
-                            <a href="#" class="mt-5 inline-block text-primary-700 font-semibold hover:text-primary-900 transition-colors">View Project <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
+              </div>
+              <div class="md:w-2/3 p-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                  <div class="md:w-1/2">
+                    <ul class="space-y-3 text-gray-700 text-lg">
+                      <li class="flex items-start">
+                        <svg
+                          class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                        Assignments and quizzes begin
+                      </li>
+                      <li class="flex items-start">
+                        <svg
+                          class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                        Library and online resources explored
+                      </li>
+                      <li class="flex items-start">
+                        <svg
+                          class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                        Mid-semester progress check
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 mt-4 md:mt-0 flex items-center">
+                    <div
+                      class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border border-primary-100"
+                    >
+                      <img
+                        src="/api/placeholder/500/300"
+                        alt="October 2024 activities"
+                        class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                    <!-- Project 2 -->
-                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                        <img src="/api/placeholder/400/200" alt="Project 2" class="w-full h-40 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold">Project Title 2</h3>
-                            <p class="text-gray-700 mt-3 text-base">Brief description of the project.</p>
-                            <a href="#" class="mt-5 inline-block text-primary-700 font-semibold hover:text-primary-900 transition-colors">View Project <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
+          <!-- Quick Preview for Next Months -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- November 2024 -->
+            <div
+              class="bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+            >
+              <div
+                class="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-5"
+              >
+                <h3 class="text-2xl font-bold">November 2024</h3>
+                <p class="text-primary-100 text-base">Midterms</p>
+              </div>
+              <div class="p-5">
+                <div class="mb-4">
+                  <img
+                    src="/api/placeholder/400/200"
+                    alt="November 2024"
+                    class="rounded-lg w-full h-32 object-cover"
+                  />
+                </div>
+                <div class="text-base text-gray-700 space-y-1">
+                  <p>Midterm exams</p>
+                  <p>Academic support workshops</p>
+                  <p>Stress management & self-care</p>
+                </div>
+                <div class="mt-4 flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-primary-600 hover:text-primary-800 transition-colors"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-primary-600 hover:text-primary-800 transition-colors"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
 
-                    <!-- Project 3 -->
-                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100">
-                        <img src="/api/placeholder/400/200" alt="Project 3" class="w-full h-40 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold">Project Title</h3>
-                            <p class="text-gray-700 mt-3 text-base">Brief description of the project.</p>
-                            <a href="#" class="mt-5 inline-block text-primary-700 font-semibold hover:text-primary-900 transition-colors">View Project <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
+            <!-- December 2024 -->
+            <div
+              class="bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+            >
+              <div
+                class="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-5"
+              >
+                <h3 class="text-2xl font-bold">December 2024</h3>
+                <p class="text-primary-100 text-base">Finals & Winter Break</p>
+              </div>
+              <div class="p-5">
+                <div class="mb-4">
+                  <img
+                    src="/api/placeholder/400/200"
+                    alt="December 2024"
+                    class="rounded-lg w-full h-32 object-cover"
+                  />
                 </div>
-            </section>
-            <!-- Contact Section -->
-             <section id="contact" class="mb-24">
-                <div class="text-center mb-14">
-                    <h2 class="text-4xl font-extrabold text-gray-800 mb-2 tracking-tight">Contact Me</h2>
-                    <div class="h-1 w-24 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded"></div>
-                    <p class="text-xl text-gray-600 mt-4 font-light">I'd love to hear from you!</p>
+                <div class="text-base text-gray-700 space-y-1">
+                  <p>Final exams</p>
+                  <p>Submission of major assignments</p>
+                  <p>Winter holidays and travel</p>
                 </div>
-                <form action="#" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-xl border border-primary-100">
-                    <div class="mb-6">
-                        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-                        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all">
+                <div class="mt-4 flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-primary-600 hover:text-primary-800 transition-colors"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-primary-600 hover:text-primary-800 transition-colors"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- January 2025 -->
+            <div
+              class="bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+            >
+              <div
+                class="bg-gradient-to-r from-primary-700 to-primary-500 text-white p-5"
+              >
+                <h3 class="text-2xl font-bold">January 2025</h3>
+                <p class="text-primary-100 text-base">Semester 2 Starts</p>
+              </div>
+              <div class="p-5">
+                <div class="mb-4">
+                  <img
+                    src="/api/placeholder/400/200"
+                    alt="January 2025"
+                    class="rounded-lg w-full h-32 object-cover"
+                  />
+                </div>
+                <div class="text-base text-gray-700 space-y-1">
+                  <p>New classes, new professors</p>
+                  <p>Focus on improving study habits</p>
+                  <p>Start of student projects</p>
+                </div>
+                <div class="mt-4 flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-primary-600 hover:text-primary-800 transition-colors"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-primary-600 hover:text-primary-800 transition-colors"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-10">
+            <button
+              id="showMoreMonths"
+              class="px-8 py-3 bg-gradient-to-r from-primary-700 to-primary-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-primary-700 transition-all duration-200"
+            >
+              Show More Months
+            </button>
+          </div>
+
+          <div id="additionalMonths" class="hidden space-y-14">
+            <!-- February 2025 -->
+            <div
+              class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+            >
+              <div class="flex flex-col md:flex-row">
+                <div
+                  class="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-500 text-white p-8 flex flex-col justify-center"
+                >
+                  <h3 class="text-3xl font-bold mb-2">February 2025</h3>
+                  <p class="text-primary-100 text-lg">Deep Learning Phase</p>
+                  <div class="mt-6 flex space-x-4">
+                    <a href="#" class="hover:text-primary-200 transition-colors"
+                      ><i class="fab fa-instagram text-2xl"></i
+                    ></a>
+                    <a href="#" class="hover:text-primary-200 transition-colors"
+                      ><i class="fab fa-twitter text-2xl"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="md:w-2/3 p-8">
+                  <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                      <ul class="space-y-3 text-gray-700 text-lg">
+                        <li class="flex items-start">
+                          <svg
+                            class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                          Workshops, presentations, and seminars
+                        </li>
+                        <li class="flex items-start">
+                          <svg
+                            class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                          Clubs and academic competitions
+                        </li>
+                        <li class="flex items-start">
+                          <svg
+                            class="h-6 w-6 text-primary-500 mr-3 mt-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                          Continuous assessments
+                        </li>
+                      </ul>
                     </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all">
+                    <div class="md:w-1/2 mt-4 md:mt-0 flex items-center">
+                      <div
+                        class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border border-primary-100"
+                      >
+                        <img
+                          src="/api/placeholder/500/300"
+                          alt="February 2025 activities"
+                          class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
                     </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"></textarea>
-                    </div>
-                    <button type="submit" class="px-8 py-3 bg-gradient-to-r from-primary-700 to-primary-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-primary-700 transition-all duration-200">Send Message</button>
-                </form>
-             </section>
-        </main>
-        <footer class="text-center py-8 text-gray-500 bg-white/70 backdrop-blur rounded-t-2xl shadow-inner mt-12">
-            &copy; 2024 Dung Phan. All rights reserved.
-        </footer>
-        <script>
-            // Mobile menu toggle
-            document.getElementById('menuButton').onclick = function() {
-                document.getElementById('mobileMenu').classList.toggle('hidden');
-            };
-            // Show more months
-            document.getElementById('showMoreMonths').onclick = function() {
-                document.getElementById('additionalMonths').classList.remove('hidden');
-                this.style.display = 'none';
-            };
-        </script>
-    </body>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section id="projects" class="mb-24">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-2 tracking-tight">
+            Projects
+          </h2>
+          <div
+            class="h-1 w-24 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded"
+          ></div>
+          <p class="text-xl text-gray-600 mt-4 font-light">
+            A showcase of my work
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+          >
+            <img
+              src="/api/placeholder/400/200"
+              alt="Project 1"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold">Project Title 1</h3>
+              <p class="text-gray-700 mt-3 text-base">
+                Brief description of the project.
+              </p>
+              <a
+                href="#"
+                class="mt-5 inline-block text-primary-700 font-semibold hover:text-primary-900 transition-colors"
+                >View Project <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+          >
+            <img
+              src="/api/placeholder/400/200"
+              alt="Project 2"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold">Project Title 2</h3>
+              <p class="text-gray-700 mt-3 text-base">
+                Brief description of the project.
+              </p>
+              <a
+                href="#"
+                class="mt-5 inline-block text-primary-700 font-semibold hover:text-primary-900 transition-colors"
+                >View Project <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.025] border border-primary-100"
+          >
+            <img
+              src="/api/placeholder/400/200"
+              alt="Project 3"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold">Project Title</h3>
+              <p class="text-gray-700 mt-3 text-base">
+                Brief description of the project.
+              </p>
+              <a
+                href="#"
+                class="mt-5 inline-block text-primary-700 font-semibold hover:text-primary-900 transition-colors"
+                >View Project <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="mb-24">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-2 tracking-tight">
+            Contact Me
+          </h2>
+          <div
+            class="h-1 w-24 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded"
+          ></div>
+          <p class="text-xl text-gray-600 mt-4 font-light">
+            I'd love to hear from you!
+          </p>
+        </div>
+        <form
+          action="#"
+          method="POST"
+          class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-xl border border-primary-100"
+        >
+          <div class="mb-6">
+            <label for="name" class="block text-gray-700 font-semibold mb-2"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
+            />
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block text-gray-700 font-semibold mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
+            />
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 font-semibold mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="px-8 py-3 bg-gradient-to-r from-primary-700 to-primary-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-primary-700 transition-all duration-200"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer
+      class="text-center py-8 text-gray-500 bg-white/70 backdrop-blur rounded-t-2xl shadow-inner mt-12"
+    >
+      &copy; 2025 Dung Phan. All rights reserved.
+    </footer>
+    <script>
+      // Mobile menu toggle
+      document.getElementById("menuButton").onclick = function () {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      };
+      // Show more months
+      document.getElementById("showMoreMonths").onclick = function () {
+        document.getElementById("additionalMonths").classList.remove("hidden");
+        this.style.display = "none";
+      };
+    </script>
+  </body>
 </html>
