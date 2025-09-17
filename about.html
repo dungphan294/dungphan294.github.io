@@ -5,262 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About — Dung Phan</title>
-  <meta name="description" content="Learn about Dung Phan — Applied Computer Science student specializing in Data & AI Engineering and IoT/Embedded Systems.">
+  <meta name="description"
+    content="Learn about Dung Phan — Applied Computer Science student specializing in Data & AI Engineering and IoT/Embedded Systems.">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .about-content {
-      background: white;
-      padding: 6rem 0;
-      border-top: 1px solid #f3f4f6;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .about-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .about-text h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-    }
-
-    .about-text p {
-      color: #6b7280;
-      line-height: 1.7;
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .about-text .highlight {
-      color: #1a1a1a;
-      font-weight: 500;
-    }
-
-    .skills-section {
-      background: #fafafa;
-      border: 1px solid #f3f4f6;
-      border-radius: 8px;
-      padding: 3rem;
-    }
-
-    .skills-section h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 2.5rem;
-      letter-spacing: -0.5px;
-      text-align: center;
-    }
-
-    .skills-grid {
-      display: grid;
-      gap: 2.5rem;
-    }
-
-    .skill-category {
-      border-bottom: 1px solid #f3f4f6;
-      padding-bottom: 2rem;
-    }
-
-    .skill-category:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .skill-category h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill-tag {
-      background: white;
-      color: #6b7280;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      border: 1px solid #e5e7eb;
-      transition: all 0.2s ease;
-    }
-
-    .skill-tag:hover {
-      background: #f9fafb;
-      color: #1a1a1a;
-      border-color: #d1d5db;
-    }
-
-    .education-section {
-      background: #fafafa;
-      padding: 4rem 0;
-      border-top: 1px solid #f3f4f6;
-    }
-
-    .education-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      text-align: center;
-    }
-
-    .education-content h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 2rem;
-      letter-spacing: -0.5px;
-    }
-
-    .education-card {
-      background: white;
-      border: 1px solid #f3f4f6;
-      border-radius: 8px;
-      padding: 3rem;
-      margin-bottom: 2rem;
-      transition: all 0.2s ease;
-    }
-
-    .education-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-color: #e5e7eb;
-    }
-
-    .education-card h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.3px;
-    }
-
-    .education-card .institution {
-      color: #6b7280;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .education-card .description {
-      color: #6b7280;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .cv-section {
-      background: white;
-      padding: 4rem 0;
-      text-align: center;
-      border-top: 1px solid #f3f4f6;
-    }
-
-    .cv-section h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.5px;
-    }
-
-    .cv-section p {
-      color: #6b7280;
-      margin-bottom: 2rem;
-      font-size: 1rem;
-    }
-
-    .cv-section .btn {
-      padding: 1rem 2rem;
-      background: #1a1a1a;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: all 0.15s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .cv-section .btn:hover {
-      background: #000;
-      transform: translateY(-1px);
-    }
-
-
-    /* Responsive */
-    @media (max-width: 968px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .about-hero {
-        padding: 4rem 0 3rem 0;
-        margin-top: 100px;
-      }
-
-      .about-hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .about-content {
-        padding: 4rem 0;
-      }
-
-      .about-grid {
-        gap: 3rem;
-        padding: 0 1rem;
-      }
-
-      .skills-section {
-        padding: 2rem;
-      }
-
-      .education-card {
-        padding: 2rem;
-      }
-    }
-
-    /* Ensure body takes full height for footer positioning */
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-    }
-  </style>
 </head>
 
 <body>
@@ -282,7 +30,8 @@
       <div class="container">
         <h1>About Me</h1>
         <p class="subtitle">
-          Applied Computer Science student passionate about bridging hardware and software through innovative engineering solutions.
+          Applied Computer Science student passionate about bridging hardware and software through innovative
+          engineering solutions.
         </p>
       </div>
     </section>
@@ -293,32 +42,70 @@
           <div>
             <h2>Who I Am</h2>
             <p>
-              I'm <span class="highlight">Dung Phan</span>, an Applied Computer Science student at Saxion University of Applied Sciences, currently enrolled in the Honours Programme focusing on XR/AI technologies. My passion lies in creating end-to-end systems that seamlessly connect the physical and digital worlds.
+              I'm <span class="highlight">Dung Phan</span>, an Applied Computer Science student at Saxion University of
+              Applied Sciences, currently enrolled in the Honours Programme focusing on AI technologies. My passion lies
+              in creating <span class="highlight">end-to-end systems</span> that seamlessly connect the physical and
+              digital worlds.
             </p>
             <p>
-              My journey spans from low-level embedded programming with ESP32 microcontrollers to cloud-scale data engineering solutions. I thrive on the challenge of building complete IoT ecosystems - from sensor data collection through LoRaWAN networks to real-time dashboards and analytics platforms.
+              My journey spans from <span class="highlight">low-level embedded programming with ESP32
+                microcontrollers</span> to <span class="highlight">cloud-scale data engineering solutions</span>. I
+              thrive on the challenge of building complete IoT ecosystems - from sensor data collection through <span
+                class="highlight">LoRaWAN</span> networks to real-time dashboards and analytics platforms.
             </p>
           </div>
 
           <div>
             <h2>What I Do</h2>
             <p>
-              I specialize in <span class="highlight">Data & AI Engineering</span>, <span class="highlight">IoT/Embedded Systems</span>, and <span class="highlight">Full-Stack Development</span>. My work focuses on creating scalable, real-time systems that process and visualize data from multiple sources.
+              I specialize in:
             </p>
+            <ul>
+
+              <li>
+                <span class="highlight">Data & AI Engineering</span> scalable ETL pipelines, real-time streaming (Kafka,
+                Spark), and SQL/NoSQL databases.
+              </li>
+              <li>
+                <span class="highlight">Data & AI Engineering</span> ESP32 development, Linux device drivers, and RTOS
+                simulations.
+              </li>
+              <li>
+                <span class="highlight">Full-Stack Development</span> cross-platform apps with Flutter and .NET MAUI,
+                integrated with cloud services.
+              </li>
+            </ul>
             <p>
-              Whether it's developing Linux device drivers, implementing streaming ETL pipelines with Kafka and Spark, or building cross-platform mobile applications with Flutter, I enjoy tackling complex technical challenges that require both system-level thinking and practical implementation skills.
+              Whether it's developing Linux device drivers, implementing streaming ETL pipelines with Kafka and Spark,
+              or building cross-platform mobile applications with Flutter, I enjoy tackling complex technical challenges
+              that require both system-level thinking and practical implementation skills.
             </p>
           </div>
 
           <div>
             <h2>Career Aspirations</h2>
             <p>
-              I'm actively seeking <span class="highlight">internship opportunities</span> in Data Engineering, AI/ML Engineering, or IoT Development roles, preferably in the EU/Netherlands region for Spring 2026. I'm particularly interested in positions that combine my embedded systems background with modern data engineering practices.
+              I’m seeking <strong>internship opportunities</strong> for <strong>Spring 2026</strong> in:
             </p>
+
+            <ul class="role-list">
+              <li>Data Engineering</li>
+              <li>AI/ML Engineering</li>
+              <li>IoT/Embedded Development</li>
+            </ul>
+
             <p>
-              My goal is to contribute to innovative projects that leverage IoT data for intelligent decision-making, whether in smart cities, industrial automation, or sustainable technology solutions.
+              Ideally in the <span class="highlight">EU/Netherlands</span>, where I can combine my embedded systems
+              background with modern data engineering practices.
+            </p>
+
+            <p>
+              My goal is to contribute to innovative projects that leverage IoT data for intelligent decision-making —
+              from smart cities to industrial automation and sustainable technologies.
             </p>
           </div>
+
+
         </div>
 
         <div class="skills-section">
@@ -345,7 +132,6 @@
                 <span class="skill-tag">Azure SQL</span>
                 <span class="skill-tag">Docker</span>
                 <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">DBT</span>
               </div>
             </div>
 
@@ -395,8 +181,8 @@
           <h3>Bachelor of Applied Computer Science</h3>
           <div class="institution">Saxion University of Applied Sciences</div>
           <div class="description">
-            Currently enrolled in the Honours Programme with a focus on XR (Extended Reality) and AI technologies. 
-            Specializing in Data Engineering, IoT Systems, and Machine Learning applications. 
+            Currently enrolled in the Honours Programme with a focus on XR (Extended Reality) and AI technologies.
+            Specializing in Data Engineering, IoT Systems, and Machine Learning applications.
             Expected graduation: 2026.
           </div>
         </div>
@@ -407,7 +193,7 @@
       <div class="container">
         <h2>Want to Know More?</h2>
         <p>Download my CV for a detailed overview of my experience, projects, and technical background.</p>
-        <a href="#" class="btn">
+        <a href="downloads/Van_Dung_Phan_CV.pdf" class="btn">
           <i class="fas fa-download"></i>
           Download CV
         </a>
@@ -421,4 +207,5 @@
     </div>
   </footer>
 </body>
+
 </html>
