@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Dung Phan</title>
+  <meta name="description" content="Dung Phan — Data & AI Engineering, IoT/Embedded Systems, and full‑stack projects.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .projects-list {
+      background: white;
+      padding: 4rem 0 6rem 0;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .projects-list .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .projects-list .project-card {
+      background: #fafafa;
+      border: 1px solid #f3f4f6;
+      border-radius: 8px;
+      padding: 3rem;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .projects-list .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-color: #e5e7eb;
+    }
+
+    .projects-list .project-card h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .projects-list .project-card p {
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    .projects-list .btn {
+      padding: 0.8rem 1.8rem;
+      background: #1a1a1a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .projects-list .btn:hover {
+      background: #000;
+      transform: translateY(-1px);
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Dung Phan</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="subtitle">
+          A selection of my work in Data & AI Engineering, IoT/Embedded Systems, and full-stack development.
+        </p>
+      </div>
+    </section>
+
+    <section class="projects-list">
+      <div class="container">
+        <div class="project-card">
+          <div class="project-icon" style="font-size: 1.8rem; color: #6b7280; margin-bottom: 1.5rem;">
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+          <h2>WeatherThingy</h2>
+          <p>Complete IoT weather monitoring system with ESP32, LoRaWAN connectivity to TTN, Azure SQL Server backend, and real-time .NET MAUI dashboard. Demonstrates full-stack IoT architecture from sensor to visualization.</p>
+          <div class="tech-tags" style="margin-bottom: 2rem;">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">LoRaWAN</span>
+            <span class="tech-tag">Azure SQL</span>
+            <span class="tech-tag">.NET MAUI</span>
+            <span class="tech-tag">TTN</span>
+          </div>
+          <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View Details
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon" style="font-size: 1.8rem; color: #6b7280; margin-bottom: 1.5rem;">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h2>VitalSync</h2>
+          <p>ESP32-based fitness wearable with heart rate monitoring, accelerometer tracking, and Flutter mobile app. Features real-time health metrics, workout analysis, and Bluetooth connectivity for seamless data sync.</p>
+          <div class="tech-tags" style="margin-bottom: 2rem;">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Bluetooth</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Dart</span>
+          </div>
+          <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View Details
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon" style="font-size: 1.8rem; color: #6b7280; margin-bottom: 1.5rem;">
+            <i class="fas fa-database"></i>
+          </div>
+          <h2>FIFA World Cup Analytics DB</h2>
+          <p>Comprehensive SQL Server database with 28 normalized tables covering FIFA World Cup history (1930-2022). Includes complex analytics queries, performance optimization, and data visualization for tournament insights.</p>
+          <div class="tech-tags" style="margin-bottom: 2rem;">
+            <span class="tech-tag">SQL Server</span>
+            <span class="tech-tag">T-SQL</span>
+            <span class="tech-tag">Analytics</span>
+          </div>
+          <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="project-link">
+              <i class="fas fa-chart-bar"></i> Analytics
+            </a>
+          </div>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View Details
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon" style="font-size: 1.8rem; color: #6b7280; margin-bottom: 1.5rem;">
+            <i class="fas fa-code"></i>
+          </div>
+          <h2>phan-driver</h2>
+          <p>Custom Linux character driver for embedded systems development. Demonstrates low-level system programming with proper kernel module implementation, device file operations, and hardware abstraction.</p>
+          <div class="tech-tags" style="margin-bottom: 2rem;">
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">Linux Kernel</span>
+            <span class="tech-tag">Driver Dev</span>
+            <span class="tech-tag">Embedded</span>
+            <span class="tech-tag">Systems</span>
+          </div>
+          <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="project-link">
+              <i class="fas fa-file-code"></i> Documentation
+            </a>
+          </div>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View Details
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon" style="font-size: 1.8rem; color: #6b7280; margin-bottom: 1.5rem;">
+            <i class="fas fa-stream"></i>
+          </div>
+          <h2>Streaming ETL Pipeline</h2>
+          <p>Real-time data processing pipeline using Apache Kafka and Spark, containerized with Docker. Handles high-throughput data streams with fault tolerance, monitoring, and scalable architecture for production workloads.</p>
+          <div class="tech-tags" style="margin-bottom: 2rem;">
+            <span class="tech-tag">Kafka</span>
+            <span class="tech-tag">Spark</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">ETL</span>
+          </div>
+          <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Architecture
+            </a>
+          </div>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View Details
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon" style="font-size: 1.8rem; color: #6b7280; margin-bottom: 1.5rem;">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h2>Baron1898 RTOS</h2>
+          <p>Real-Time Operating System simulation implementing semaphore-based resource management and task scheduling. Educational project demonstrating concurrent programming concepts and embedded systems fundamentals.</p>
+          <div class="tech-tags" style="margin-bottom: 2rem;">
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">RTOS</span>
+            <span class="tech-tag">Semaphores</span>
+            <span class="tech-tag">Threading</span>
+            <span class="tech-tag">Embedded</span>
+          </div>
+          <div class="project-links" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="project-link">
+              <i class="fas fa-play"></i> Simulation
+            </a>
+          </div>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View Details
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Dung Phan. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Dung Phan</title>
+  <meta name="description"
+    content="Get in touch with Dung Phan — Data & AI Engineering, IoT/Embedded Systems specialist.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Dung Phan</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Let's Connect</h1>
+        <p class="subtitle">
+          Ready to discuss opportunities, collaborate on projects, or just have a technical chat? I'd love to hear from
+          you.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div>
+            <h2>Get In Touch</h2>
+            <div class="contact-links">
+              <a href="mailto:dungpv.294@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i>
+                <div class="link-content">
+                  <div class="link-label">Email</div>
+                  <div class="link-value">dungpv.294@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/vdphan/" target="_blank" rel="noopener" class="contact-link">
+                <i class="fab fa-linkedin"></i>
+                <div class="link-content">
+                  <div class="link-label">LinkedIn</div>
+                  <div class="link-value">/in/vdphan</div>
+                </div>
+                <i class="fas fa-external-link-alt external-icon"></i>
+              </a>
+
+              <a href="https://github.com/dungphan294" target="_blank" rel="noopener" class="contact-link">
+                <i class="fab fa-github"></i>
+                <div class="link-content">
+                  <div class="link-label">GitHub</div>
+                  <div class="link-value">@dungphan294</div>
+                </div>
+                <i class="fas fa-external-link-alt external-icon"></i>
+              </a>
+
+              <a href="downloads/Van_Dung_Phan_CV.pdf" class="contact-link">
+                <i class="fas fa-download"></i>
+                <div class="link-content">
+                  <div class="link-label">Resume/CV</div>
+                  <div class="link-value">Download PDF</div>
+                </div>
+                <i class="fas fa-external-link-alt external-icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="availability-card">
+            <h3>Availability</h3>
+            <p>Currently seeking internship opportunities in Data Engineering, AI/ML, or IoT Development roles.</p>
+            <div class="availability-badge">
+              <i class="fas fa-circle" style="font-size: 0.5rem;"></i>
+              Available Spring 2026
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">
+              <strong>Location:</strong> EU/Netherlands preferred<br>
+              <strong>Focus:</strong> Data Engineering, IoT Systems, AI/ML
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h2>Send a Message</h2>
+          <p>Have a specific question or opportunity? Drop me a line below and I'll get back to you soon.</p>
+
+          <form id="form" method="POST">
+            <input type="hidden" id="time" name="time" value="">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title"
+                placeholder="Internship opportunity, project collaboration, etc.">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message"
+                placeholder="Tell me about the opportunity, project details, or what you'd like to discuss..."
+                required></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init('VIY_-4rzkDhynBx0Q'); // your public key
+    </script>
+    <script type="text/javascript" src="js/email.js"></script>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Dung Phan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>
