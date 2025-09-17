@@ -6,7 +6,7 @@
       "description": "Complete IoT weather monitoring system with ESP32, LoRaWAN connectivity to TTN, Azure SQL Server backend, and real-time .NET MAUI dashboard. Demonstrates full-stack IoT architecture from sensor to visualization.",
       "icon": "fas fa-cloud-rain",
       "featured": true,
-      "technologies": ["ESP32", "LoRaWAN", "Azure SQL", ".NET MAUI", "TTN"],
+      "technologies": ["ESP32", "LoRaWAN", "AWS Cloud", ".NET MAUI", "TTN"],
       "links": {
         "github": "https://github.com/dungphan294/weatherthingy",
         "demo": "https://weatherthingy-demo.example.com",
@@ -22,7 +22,7 @@
       "featured": true,
       "technologies": ["ESP32", "Flutter", "Bluetooth", "C++", "Dart"],
       "links": {
-        "github": "https://github.com/dungphan294/vitalsync",
+        "github": "https://github.com/StefanMutafov/PINT",
         "demo": "https://vitalsync-app.example.com",
         "documentation": null
       },
@@ -31,54 +31,26 @@
     {
       "id": "fifa-worldcup-db",
       "title": "FIFA World Cup Analytics DB",
-      "description": "Comprehensive SQL Server database with 28 normalized tables covering FIFA World Cup history (1930-2022). Includes complex analytics queries, performance optimization, and data visualization for tournament insights.",
+      "description": "Comprehensive SQL Server database with 28 normalized tables covering FIFA World Cup history (2018-2022). Includes complex analytics queries, performance optimization, and data visualization for tournament insights.",
       "icon": "fas fa-database",
       "featured": true,
-      "technologies": ["SQL Server", "T-SQL", "Power BI", "Analytics", "ETL"],
+      "technologies": ["SQL Server", "T-SQL", "Analytics", "Database Design"],
       "links": {
-        "github": "https://github.com/dungphan294/fifa-worldcup-db",
+        "github": "https://github.com/dungphan294/fifa_worldcup_db",
         "demo": null,
         "documentation": "https://fifa-analytics.example.com"
       },
-      "category": "Data Engineering"
+      "category": "Database Design"
     },
     {
-      "id": "phan-driver",
-      "title": "phan-driver",
-      "description": "Custom Linux character driver for embedded systems development. Demonstrates low-level system programming with proper kernel module implementation, device file operations, and hardware abstraction.",
-      "icon": "fas fa-code",
-      "featured": false,
-      "technologies": ["C", "Linux Kernel", "Driver Dev", "Embedded", "Systems"],
-      "links": {
-        "github": "https://github.com/dungphan294/phan-driver",
-        "demo": null,
-        "documentation": "https://phan-driver-docs.example.com"
-      },
-      "category": "Systems Programming"
-    },
-    {
-      "id": "streaming-etl",
-      "title": "Streaming ETL Pipeline",
-      "description": "Real-time data processing pipeline using Apache Kafka and Spark, containerized with Docker. Handles high-throughput data streams with fault tolerance, monitoring, and scalable architecture for production workloads.",
-      "icon": "fas fa-stream",
-      "featured": false,
-      "technologies": ["Kafka", "Spark", "Docker", "Python", "ETL"],
-      "links": {
-        "github": "https://github.com/dungphan294/streaming-etl",
-        "demo": null,
-        "documentation": "https://etl-architecture.example.com"
-      },
-      "category": "Data Engineering"
-    },
-    {
-      "id": "baron1898-rtos",
+      "id": "rtos",
       "title": "Baron1898 RTOS",
       "description": "Real-Time Operating System simulation implementing semaphore-based resource management and task scheduling. Educational project demonstrating concurrent programming concepts and embedded systems fundamentals.",
       "icon": "fas fa-microchip",
       "featured": false,
       "technologies": ["C++", "RTOS", "Semaphores", "Threading", "Embedded"],
       "links": {
-        "github": "https://github.com/dungphan294/baron1898-rtos",
+        "github": "https://github.com/dungphan294/rtos",
         "demo": "https://rtos-simulation.example.com",
         "documentation": null
       },
