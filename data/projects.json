@@ -9,7 +9,7 @@
       "technologies": ["ESP32", "LoRaWAN", "AWS Cloud", ".NET MAUI", "TTN"],
       "links": {
         "github": "https://github.com/dungphan294/weatherthingy",
-        "demo": "https://weatherthingy-demo.example.com",
+        "demo": null,
         "documentation": null
       },
       "category": "IoT"
@@ -23,7 +23,7 @@
       "technologies": ["ESP32", "Flutter", "Bluetooth", "C++", "Dart"],
       "links": {
         "github": "https://github.com/StefanMutafov/PINT",
-        "demo": "https://vitalsync-app.example.com",
+        "demo": null,
         "documentation": null
       },
       "category": "IoT"
@@ -38,7 +38,7 @@
       "links": {
         "github": "https://github.com/dungphan294/fifa_worldcup_db",
         "demo": null,
-        "documentation": "https://fifa-analytics.example.com"
+        "documentation": null
       },
       "category": "Database Design"
     },
@@ -51,7 +51,7 @@
       "technologies": ["C++", "RTOS", "Semaphores", "Threading", "Embedded"],
       "links": {
         "github": "https://github.com/dungphan294/rtos",
-        "demo": "https://rtos-simulation.example.com",
+        "demo": null,
         "documentation": null
       },
       "category": "Systems Programming"
